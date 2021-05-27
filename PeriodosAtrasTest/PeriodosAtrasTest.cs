@@ -64,25 +64,25 @@ namespace PeriodosAtrasTest
         }
 
         [TestMethod]
-        public void DeveVerificar7meses3semanas2dias()
+        public void DeveVerificar7meses2semanas6dias()
         {
             DateTime dataInicial = DateTime.Parse("21/08/2020");
             DateTime dataFinal = DateTime.Parse("01/01/2020");
 
             Humunizar humunizar = new Humunizar(dataInicial, dataFinal);
 
-            Assert.AreEqual("sete meses e tres semanas e dois dias", humunizar.valor_saida);
+            Assert.AreEqual("sete meses e duas semanas e seis dias", humunizar.valor_saida);
         }
 
         [TestMethod]
-        public void DeveVerificar3anos12meses()
+        public void DeveVerificar3anos11meses3semanas5dias()
         {
             DateTime dataInicial = DateTime.Parse("26/12/2020");
             DateTime dataFinal = DateTime.Parse("01/01/2017");
 
             Humunizar humunizar = new Humunizar(dataInicial, dataFinal);
 
-            Assert.AreEqual("tres anos e doze meses", humunizar.valor_saida);
+            Assert.AreEqual("tres anos e onze meses e tres semanas e cinco dias", humunizar.valor_saida);
         }
     }
 }
